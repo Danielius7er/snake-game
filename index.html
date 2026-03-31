@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel" aria-labelledby="title">
+        <div class="header">
+          <div>
+            <p class="eyebrow">Classic Snake</p>
+            <h1 id="title">Snake</h1>
+            <p id="mode" class="mode" aria-live="polite">Ready</p>
+          </div>
+          <button id="restart" type="button">Restart</button>
+        </div>
+
+        <div class="hud" aria-live="polite">
+          <p>Score: <span id="score">0</span></p>
+          <p id="status">Use arrow keys or WASD to start.</p>
+        </div>
+
+        <div class="board-wrap">
+          <div id="board" class="board" role="grid" aria-label="Snake game board"></div>
+        </div>
+
+        <div class="controls" aria-label="Touch controls">
+          <button type="button" data-direction="up" aria-label="Move up">Up</button>
+          <button type="button" class="ghost" aria-hidden="true" tabindex="-1"></button>
+          <button type="button" class="ghost" aria-hidden="true" tabindex="-1"></button>
+          <button type="button" data-direction="left" aria-label="Move left">Left</button>
+          <button type="button" class="ghost" aria-hidden="true" tabindex="-1"></button>
+          <button type="button" data-direction="right" aria-label="Move right">Right</button>
+          <button type="button" class="ghost" aria-hidden="true" tabindex="-1"></button>
+          <button type="button" data-direction="down" aria-label="Move down">Down</button>
+          <button type="button" class="ghost" aria-hidden="true" tabindex="-1"></button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
